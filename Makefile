@@ -1,7 +1,7 @@
 PROJ=main
 
 GCC_DIR=/home/isaac/ti/msp430_gcc
-SUPPORT_FILE_DIR=$(GCC_DIR)
+#SUPPORT_FILE_DIR=$(GCC_DIR)
 
 SOURCES=main.c
 INCLUDES=-Iinclude
@@ -59,4 +59,4 @@ clean:
 
 
 flash: all
-	mspdebug rf2500 'erase' 'load $(PROJ).elf' 'exit'
+	mspdebug rf2500 'erase' 'load $(OUTDIR)/$(PROJ).elf' 'exit'
